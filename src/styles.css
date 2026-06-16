@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply inline-flex min-h-12 flex-1 cursor-pointer items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-4 text-base font-bold text-slate-800 transition hover:border-recycle-600 hover:bg-recycle-50 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-recycle-600 sm:flex-none;
+  }
+
+  .primary-action {
+    @apply inline-flex min-h-16 w-full cursor-pointer items-center justify-center rounded-lg bg-recycle-700 px-6 text-2xl font-extrabold text-white transition hover:bg-recycle-800 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-recycle-600;
+  }
+
+  .secondary-action {
+    @apply inline-flex min-h-14 w-full cursor-pointer items-center justify-center rounded-lg border-2 border-recycle-700 bg-recycle-50 px-6 text-xl font-extrabold text-recycle-800 transition hover:bg-recycle-100 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-recycle-600;
+  }
+
+  .field-label {
+    @apply mb-2 block text-xl font-extrabold text-charcoal;
+  }
+
+  .field-input {
+    @apply min-h-16 w-full rounded-lg border-2 border-slate-300 bg-white px-4 text-2xl font-bold text-charcoal outline-none transition placeholder:text-slate-400 focus:border-recycle-700 focus:ring-4 focus:ring-recycle-100;
+  }
+
+  .form-panel {
+    @apply rounded-lg border border-slate-200 bg-white p-5 shadow-tile sm:p-6;
+  }
+
+  .segmented-button {
+    @apply min-h-12 rounded-md border-2 border-slate-300 bg-white px-4 text-base font-extrabold capitalize text-slate-800 transition hover:border-recycle-600 hover:bg-recycle-50 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-recycle-600;
+  }
+
+  .segmented-button-active {
+    @apply border-recycle-700 bg-recycle-50 text-recycle-800;
+  }
+
+  .answer-button {
+    @apply min-h-16 rounded-lg border-2 border-slate-300 bg-white px-3 text-xl font-extrabold text-charcoal transition hover:border-recycle-600 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-recycle-600;
+  }
+
+  .answer-button-pass {
+    @apply border-recycle-800 bg-recycle-700 text-white shadow-tile;
+  }
+
+  .answer-button-fail {
+    @apply border-red-800 bg-safety-red text-white shadow-tile;
+  }
+
+  .answer-button-na {
+    @apply border-slate-800 bg-slate-700 text-white shadow-tile;
+  }
+
+  .status-note {
+    @apply rounded-lg border border-recycle-100 bg-recycle-50 px-5 py-4 text-lg font-bold text-recycle-800;
+  }
+
+  .error-note {
+    @apply rounded-lg border border-red-200 bg-red-50 px-5 py-4 text-lg font-bold text-safety-red;
+  }
+
+  .record-card {
+    @apply flex flex-col gap-5 rounded-lg border border-slate-200 bg-white p-5 shadow-tile sm:p-6 lg:flex-row lg:items-center lg:justify-between;
+  }
+
+  .safety-tile {
+    @apply flex min-h-[190px] flex-col rounded-lg border-2 bg-white p-6 shadow-tile transition duration-150 hover:-translate-y-0.5 hover:shadow-tile-hover focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 sm:min-h-[220px];
+  }
+
+  .tile-icon {
+    @apply mb-6 flex h-20 w-20 items-center justify-center rounded-lg border;
+  }
+
+  .tile-standard {
+    @apply border-slate-200 hover:border-recycle-600 focus-visible:outline-recycle-600;
+  }
+
+  .tile-standard .tile-icon {
+    @apply border-recycle-100 bg-recycle-50 text-recycle-800;
+  }
+
+  .tile-warning {
+    @apply border-amber-200 hover:border-safety-amber focus-visible:outline-safety-amber;
+  }
+
+  .tile-warning .tile-icon {
+    @apply border-amber-200 bg-amber-50 text-safety-amber;
+  }
+
+  .tile-danger {
+    @apply border-red-200 hover:border-safety-red focus-visible:outline-safety-red;
+  }
+
+  .tile-danger .tile-icon {
+    @apply border-red-200 bg-red-50 text-safety-red;
+  }
+}
